@@ -27,7 +27,7 @@ end
 # additional integer, n, as arguments and returns true if any two distinct 
 # elements in the array of integers sum to n. An empty array or single 
 # element array should both return false.
-def sum_2_n?(array, n)
+def sum_to_n?(array, n)
     return false if array.empty?
     return false if array.length == 1
     i = 0
@@ -56,11 +56,11 @@ puts sum(empty_array)
 puts max_2_sum(my_array)
 puts max_2_sum(empty_array)
 
-puts sum_2_n?(my_array, 19)
-puts sum_2_n?(empty_array, 19)
-puts sum_2_n?(my_array, 50)
+puts sum_to_n?(my_array, 19)
+puts sum_to_n?(empty_array, 19)
+puts sum_to_n?(my_array, 50)
 
 test_array = [1,2,3,4,5]
-puts sum_2_n?(test_array, 5)
+puts sum_to_n?(test_array, 5)
 
 
