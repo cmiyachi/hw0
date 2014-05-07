@@ -21,6 +21,7 @@ def max_2_sum(arrayOfNumbers)
     this_sum = arrayOfNumbers[len-1]+arrayOfNumbers[len-2]
     puts "Sum of two largest numbers " + this_sum.to_s
   end
+  return this_sum
 end
 
 # third program - do any of the elements sum to "n"
