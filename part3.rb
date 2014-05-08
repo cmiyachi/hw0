@@ -30,7 +30,8 @@ class BookInStock
         @price
     end
     def price_as_string
-        return "$"+price.to_s
+        pstring = "$#{format("%.2f", @price)}"
+        return pstring
     end
 end
 
