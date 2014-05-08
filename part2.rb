@@ -8,7 +8,8 @@ end
 # a consonant is any letter other than A, E, I, O, U.) NOTE: be sure it works 
 # for both upper and lower case and for nonletters!
 def starts_with_consonant?(s)
-    if (s =~ /\A[^aeiou]/) == 0 
+    s.downcase!
+    if (s =~ /\A[b-df-hj-np-tv-z]/) == 0 
         return true
     else
         return false
@@ -27,7 +28,10 @@ def binary_multiple_of_4?(s)
 end
 puts hello("Chris")
 puts "true " if starts_with_consonant?("chris")
+puts "true " if starts_with_consonant?("CHRIS")
 puts "false" if !starts_with_consonant?("isha")
+puts "Unix false" if !starts_with_consonant?("Unix")
+puts "#foo false" if !starts_with_consonant?("#foo")
 
 puts "1011".to_i(2).to_s
 puts "OK" if binary_multiple_of_4?("1100")
