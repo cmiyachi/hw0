@@ -12,10 +12,10 @@
 class BookInStock
     def initialize(isbn, price)
         # is isbn empty?
-        #raise ArgumentError unless !isbn.empty? 
+        raise ArgumentError unless !isbn.empty? 
         @isbn = isbn
         # is price <= 0 ?
-        #raise ArgumentError, 'Price <= 0' unless price > 0
+        raise ArgumentError, 'Price <= 0' unless price > 0
         @price = price
     end
     # setters and getters
@@ -39,7 +39,7 @@ end
 
 book = BookInStock.new("1234", 10.3)
 puts book.price_as_string
-book2 = BookInStock.new("", 1.2)
+# book2 = BookInStock.new("", 1.2)
 book3 = BookInStock.new("4321", -1.2)
 
 
