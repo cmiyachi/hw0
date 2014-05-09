@@ -15,7 +15,7 @@ class BookInStock
         raise ArgumentError unless !isbn.empty? 
         @isbn = isbn
         # is price <= 0 ?
-        raise ArgumentError unless price > 0
+        # raise ArgumentError unless price > 0
         @price = price
     end
     # setters and getters
